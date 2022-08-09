@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Mania</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="#" class="logo">Movie Mania</a>
+    </div>
+
+    <nav id="nav">
+      <a href="#">Popular</a>
+      <a href="#">Recent</a>
+      <a href="#">Upcoming</a>
+      <a href="#">My List</a>
+    </nav>
+
+    <form action="" id="form" >
+      <input  type="text" placeholder="Search" id="search" class="search">
+      <i onclick={searchBox()} class="fa fa-search"></i>
+    </form>
+    <label class="icon" onclick={navigation()}>
+      <i class="fa fa-bars"></i>
+    </label>
+  </header>
+
+  <main id="main" class="main">
+    <div class="movie">
+      <img src="/download.jfif" alt="">
+      <div class="movie-info">
+        <h3>Movie Title</h3>
+        <p>Release date</p>
+        <span class="green"></span>
+      </div>
+
+      <div class="overview">
+        <h4>Overview</h4>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="movie">
+      <img src="/download.jfif" alt="">
+      <div class="movie-info">
+        <h3>Movie Title</h3>
+        <p>Release date</p>
+        <span class="green">9.9</span>
+      </div>
+
+      <div class="overview">
+        <h4>Overview</h4>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="movie">
+      <img src="/download.jfif" alt="">
+      <div class="movie-info">
+        <h3>Movie Title</h3>
+        <h5>Release date</h5>
+        <span class="green"></span>
+      </div>
+
+      <div class="overview">
+        <h4>Overview</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quisquam porro accusantium necessitatibus rem, neque dolorem eveniet tempora, suscipit obcaecati laboriosam illo esse mollitia blanditiis eos laborum nam itaque. Modi.</p>
+      </div>
+    </div>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>

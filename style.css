@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'poppins' ,sans-serif;
+  margin: 0;
+}
+
+header {
+  margin: 5px 0px;
+  padding: .5rem;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  border-bottom: rgba(153, 153, 153, 0.1)  solid;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(185, 45, 45);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+nav > a {
+  text-decoration: none;
+  padding: 0px 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.search {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search::placeholder {
+  color: rgb(41, 41, 41);
+}
+
+input:focus {
+  outline: none 
+  }
+
+.fa-search {
+  color: white;
+  font-size: 24px;
+  padding: 0px 3px;
+  align-self: center;
+}
+
+.icon {
+  color: white;
+  font-size: 24px;
+  display: none;
+}
+
+nav > a:hover{
+  background-color: rgb(41, 41, 41);
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 400px;
+  margin: .5rem;
+  background-color: rgba(41, 41, 41,0.3);
+  position: relative;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+}
+
+.movie > img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+.movie-info > span {
+  background-color: rgba(49, 49, 49,0.4);
+  padding: 0.25rem 1rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  background-color: rgba(5, 100, 5, 0.4);
+}
+
+.movie-info span.orange {
+  background-color: rgba(126, 53, 4, 0.4);
+}
+
+.movie-info span.red {
+  background-color: rgba(117, 21, 4, 0.4);
+}
+
+.movie-info > h3 {
+  letter-spacing: 0.5px;
+  color: #cacaca;
+  padding: 3px;
+}
+.movie-info > h5 {
+  color: #b6b6b6;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: justify;
+  max-height: 100%;
+  background-color:#cacaca;
+  border-top-right-radius: 20px;
+  padding: 1rem;
+  transition: transform 0.3s ease-in;
+  transform: translateY(101%);
+}
+
+.movie:hover .overview {
+  transform: translateZ(0);
+}
+
+.overview > h4 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.9);
+    animation: hide;
+    animation-duration: 3s ; 
+  }
+
+  nav > a {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .icon {
+    display: block;
+    position: fixed;
+    right: 4px;
+  }
+
+  .show {
+    display: flex;
+    animation: show;
+    animation-duration: 3s ;
+  }
+
+  @keyframes show {
+    from {
+      top: -250px;
+    }
+    to {
+      top: 80px;
+    }
+    
+  }
+
+  .search {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+
+  .search::placeholder{
+    color: #cacaca;
+    padding-left: 10px;
+  }
+
+  .fa-search {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    font-size: 26px;
+  }
+
+  .showBox{
+    display: block;
+  }
+
+
+
+
+}
